@@ -11,6 +11,7 @@ export const Sidebar = () => {
 	const handleClickaSidebar = () => {
 		setExpandSideBar(!expandSidebar);
 	};
+	
 	return (
 		<div className='container-fluid sidebar-section'>
 			<div className={expandSidebar ? "sidebar-expand sidebar" : "sidebar"}>
