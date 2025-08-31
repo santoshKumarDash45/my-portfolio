@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "./SIdebar.css";
 import { Home } from "../Home/Home";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { SidebarList } from "./SIdebarList/SidebarList";
 
 export const Sidebar = () => {
 	const [expandSidebar, setExpandSideBar] = useState(true);
@@ -11,7 +12,7 @@ export const Sidebar = () => {
 	const handleClickaSidebar = () => {
 		setExpandSideBar(!expandSidebar);
 	};
-	
+
 	return (
 		<div className='container-fluid sidebar-section'>
 			<div className={expandSidebar ? "sidebar-expand sidebar" : "sidebar"}>
@@ -24,6 +25,9 @@ export const Sidebar = () => {
 						)}
 					</p>
 				</div>
+				<SidebarList
+					expandSidebar={expandSidebar}
+				/>
 			</div>
 			<div className='container'>
 				<Home />
