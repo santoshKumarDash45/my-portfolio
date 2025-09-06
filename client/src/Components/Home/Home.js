@@ -1,7 +1,11 @@
 /** @format */
 
 import React from "react";
-
+import './Home.css'
 export const Home = () => {
-	return <>Home section here</>;
+	return(
+		<div className="container-fluid home">
+
+		</div>
+	);
 };

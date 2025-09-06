@@ -29,7 +29,7 @@ export const Sidebar = () => {
 					expandSidebar={expandSidebar}
 				/>
 			</div>
-			<div className='container'>
+			<div className='container-fluid'>
 				<Home />
 			</div>
 		</div>

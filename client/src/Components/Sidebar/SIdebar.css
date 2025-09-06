@@ -1,6 +1,6 @@
 .sidebar-section{
-  display: flex;
-/* background-color: #030303da; */
+    display: flex;
+    /* background-color: #030303da; */
 }
 
 .sidebar{
@@ -31,5 +31,5 @@
 }
 
 .sidebar-expand {
-  width: 230px;
+  width: 280px;
 }
