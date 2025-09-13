@@ -27,8 +27,8 @@ const About = () => {
 
             <Fade right>
               <p>
-                I am a <b>Senior Software Engineer</b> with over <b>7 years of experience</b> 
-                in building <b>scalable, high-performance web applications</b>. 
+                I am a <b>Senior Software Engineer</b> with over <b>7 years of experience </b> 
+                 in building <b>scalable, high-performance web applications</b>. 
                 I specialize in modern technologies like <b>React.js, Redux, JavaScript, 
                 Node.js, and Python/Django</b>, delivering enterprise-grade solutions 
                 across diverse domains including <b>Asset Management, Supply Chain, HRMS, 
