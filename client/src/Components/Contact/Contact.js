@@ -1,137 +1,62 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Contact.css";
-import { RiSendPlaneFill } from "react-icons/ri";
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 import Fade from "react-reveal/Fade";
+import { FaEnvelope, FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
-  const API = "http://localhost:8080/sendemail";
-
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [jobtypes, setJobtypes] = useState();
-  const [message, setMessage] = useState();
-
-  const sendemailInfo = () => {
-    fetch(API, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        jobtypes,
-        message,
-      }),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result.error) {
-          toast.error(result.error, {
-            position: toast.POSITION.TOP_RIGHT,
-          });
-        } else {
-
-          toast.success("Your E-mail has been sent", {
-            position: toast.POSITION.TOP_RIGHT,
-          });
-
-          setName("");
-          setEmail("");
-          setJobtypes("");
-          setMessage("");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   return (
     <div className="container contact-section" id="contactsection">
-      <div className="row">
+      <div className="row align-items-center">
+        {/* Left Side Image */}
         <Fade bottom>
-          <div className="col-xl-5 col-lg-5 col-md-5 col-sm-5">
-            <div className="contact-form-iamge">
+          <div className="col-xl-5 col-lg-5 col-md-12 mb-4">
+            <div className="contact-image">
               <img
                 src="https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="contact form image"
+                alt="contact"
+                className="img-fluid rounded shadow"
               />
             </div>
           </div>
         </Fade>
 
+        {/* Right Side Contact Info */}
         <Fade right>
-          <div className="col-xl-7 col-lg-7 col-md-7 col-sm-7">
-            <div className="contact-form-design">
-              <div className="text-center">
+          <div className="col-xl-7 col-lg-7 col-md-12">
+            <div className="contact-info-card shadow rounded p-4">
+              <div className="text-center mb-4">
                 <h5>Contact Me</h5>
+                <span className="line"></span>
               </div>
-              <form>
-                <div className="contact-form">
-                  <label className="form-lebel">Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
+
+              <div className="contact-details">
+                <div className="contact-item d-flex align-items-center mb-3">
+                  <FaEnvelope size={22} className="contact-icon me-3" />
+                  <a href="mailto:santoshkumardash909@gmail.com">
+                    santoshkumardash909@gmail.com
+                  </a>
                 </div>
 
-                <div className="contact-form">
-                  <label className="form-lebel">E-mail</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
+                <div className="contact-item d-flex align-items-center mb-3">
+                  <FaPhoneAlt size={22} className="contact-icon me-3" />
+                  <a href="tel:+917008343193">+91-7008343193</a>
                 </div>
 
-                <div className="contact-form">
-                  <label className="form-lebel">Job Types</label>
-                  <select
-                    className="custom-select-tag"
-                    value={jobtypes}
-                    onChange={(e) => setJobtypes(e.target.value)}
+                <div className="contact-item d-flex align-items-center">
+                  <FaLinkedin size={22} className="contact-icon me-3" />
+                  <a
+                    href="https://www.linkedin.com/in/santosh-kumar-dash-2a5491156/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <option>Full-time</option>
-                    <option>Working Student</option>
-
-                    <option>Part-time</option>
-
-                    <option>Contract</option>
-                  </select>
+                    linkedin.com/in/santosh-kumar-dash-2a5491156
+                  </a>
                 </div>
-
-                <div className="contact-form">
-                  <label className="form-lebel">Message</label>
-                  <textarea
-                    rows="4"
-                    type="text"
-                    className="form-control"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                  />
-                </div>
-
-                <div className="button-submit" onClick={sendemailInfo}>
-                  <p>
-                    Send <RiSendPlaneFill size={20} />
-                  </p>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </Fade>
       </div>
-
-      <ToastContainer draggable autoClose={8000} />
     </div>
   );
 };

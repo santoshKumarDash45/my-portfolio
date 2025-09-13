@@ -92,3 +92,31 @@
     background-color: #FF1042;
     transition-duration: 1s;
 }
+
+.contact-info-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details a {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  color: #FF1042;
+  text-decoration: underline;
+}
+
+.contact-icon {
+  color: #FF1042;
+}
+
+.contact-image img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
