@@ -2,53 +2,28 @@ import React, { useState } from "react";
 import "./TechStack.css";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
+
 const TechStack = () => {
   const data = [
-    {
-      name: "Full Stack Developer",
-    },
-    {
-      name: "Node js",
-    },
-    {
-      name: "React js",
-    },
-    {
-      name: "Vue js",
-    },
-    {
-      name: "Express js",
-    },
-    {
-      name: "Vue js",
-    },
-    {
-      name: "Nuxt js",
-    },
-    {
-      name: "Angular js",
-    },
-    {
-      name: "Vanila js",
-    },
-    {
-      name: "Node js",
-    },
-    {
-      name: "Javascript",
-    },
-    {
-      name: "Typescript",
-    },
-    {
-      name: "Python",
-    },
-    {
-      name: "Django",
-    },
-    {
-      name: "UI/UX Design",
-    },
+    { name: "Full Stack Developer" },
+    { name: "React.js" },
+    { name: "Next.js" },
+    { name: "Redux / Redux Toolkit" },
+    { name: "Context API / Zustand" },
+    { name: "JavaScript (ES6+)" },
+    { name: "TypeScript" },
+    { name: "HTML5 & CSS3" },
+    { name: "Material UI / Ant Design" },
+    { name: "Node.js" },
+    { name: "Express.js" },
+    { name: "Python (Django)" },
+    { name: "PHP (Yii Framework)" },
+    { name: "PostgreSQL / MySQL" },
+    { name: "MongoDB" },
+    { name: "AWS" },
+    { name: "Git / Jira" },
+    { name: "Nginx / Apache" },
+    { name: "Ubuntu" },
   ];
 
   const colors = [
@@ -66,7 +41,11 @@ const TechStack = () => {
     "#00C79F",
     "#FFBB24",
     "#FF1042",
-    "#FF1042",
+    "#7B1FA2",
+    "#2E7D32",
+    "#FF5722",
+    "#1976D2",
+    "#9C27B0",
   ];
 
   const [showMoreTechStack, setShowMoreTechStack] = useState(9);
@@ -84,8 +63,8 @@ const TechStack = () => {
 
       <div className="row">
         {data.slice(0, showMoreTechStack).map((item, index) => (
-          <Fade right>
-            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12" key={index}>
+          <Fade right key={index}>
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
               <div
                 className={
                   index === 0
@@ -95,7 +74,7 @@ const TechStack = () => {
               >
                 <span
                   className="tech-number"
-                  style={{ backgroundColor: colors[index] }}
+                  style={{ backgroundColor: colors[index % colors.length] }}
                 >
                   {index + 1}
                 </span>

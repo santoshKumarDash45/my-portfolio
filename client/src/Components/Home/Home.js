@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Typewriter from "typewriter-effect";
-import MyCv from "./cv.pdf";
+import MyCv from "./santosh_kumar_dash_resume.pdf";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import Fade from "react-reveal/Fade";
 
@@ -24,7 +24,7 @@ const Home = ({ theme, changeTheme }) => {
 
       <div className="container home-content">
         <Fade right>
-          <h1>Hi I'm Yazdani Chowdhury</h1>
+          <h1>Hi I'm Santosh Kumar Dash</h1>
           <h3>
             <Typewriter
               options={{
@@ -32,7 +32,7 @@ const Home = ({ theme, changeTheme }) => {
                   "Full Stack Software Developer",
                   "MERN Stack Developer",
                   "Web Developer",
-                  "UI/UX Designer",
+                 
                 ],
                 autoStart: true,
                 loop: true,
