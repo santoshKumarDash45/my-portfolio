@@ -7,8 +7,8 @@ const Project = () => {
 
 
     {
-      name: "MERN Stack E-commerc",
-      des: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. ",
+      name: "MERN Stack",
+      des: "This is a dummy project done for showing tech skills .",
       projectlink: "https://react-company-profile.netlify.app/",
       techused: [
         {
